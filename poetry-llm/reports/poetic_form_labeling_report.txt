@@ -1,0 +1,11 @@
+严格体裁标注报告 / Strict poetic-form labeling report
+==============================================================
+train: kept=27,781/56,443; 五言绝句=2,164, 七言绝句=6,961, 五言律诗=11,600, 七言律诗=7,056
+validation: kept=1,572/3,135; 五言绝句=116, 七言绝句=407, 五言律诗=651, 七言律诗=398
+test: kept=1,548/3,137; 五言绝句=122, 七言绝句=408, 五言律诗=647, 七言律诗=371
+
+合计 / Total: 30,901
+五言绝句=2,402, 七言绝句=7,776, 五言律诗=12,898, 七言律诗=7,825
+
+仅保留严格的四句/八句、逐句五字/七字、逗号句号交替的记录。
+Only strict 4/8-line records with uniform 5/7-character clauses and alternating punctuation are retained.

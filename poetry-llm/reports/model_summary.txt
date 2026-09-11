@@ -1,0 +1,11 @@
+模型结构报告 / Model architecture report
+============================================
+词表 / Vocabulary: 8,191
+上下文长度 / Context length: 256
+层数 / Layers: 10
+注意力头 / Attention heads: 4
+隐藏维度 / Embedding width: 256
+参数量 / Parameters: 10,032,128 (10.032M)
+权重共享 / Tied token embedding and LM head: True
+前向传播形状 / Forward output shape: (2, 32, 8191)
+反向传播 / Backward smoke test: PASS

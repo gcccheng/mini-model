@@ -1,0 +1,70 @@
+Tutorial 3 完成总结 / Tutorial 3 completion summary
+=====================================================
+
+目标 / Objective
+----------------
+将原始 UTF-8 TXT 语料转换为可审计、去重、清理并防止评估泄漏的 JSONL 数据集。
+Convert the raw UTF-8 TXT corpus into an auditable, deduplicated, cleaned JSONL
+dataset with leakage-safe train, validation, and test splits.
+
+完成情况 / Completed stages
+---------------------------
+3.3 结构检查 / Structure inspection: COMPLETE
+3.4 语料报告 / Corpus report: COMPLETE
+3.5 文本规范化 / Text normalization: COMPLETE
+3.6 JSONL 解析 / JSONL parsing: COMPLETE
+3.7 记录验证 / Record validation: COMPLETE
+3.8 精确去重 / Exact deduplication: COMPLETE
+内容清理 / Content cleaning: COMPLETE
+3.9 数据集划分 / Dataset splitting: COMPLETE
+3.10 独立重叠检查 / Independent overlap check: PASS
+3.11 随机人工抽查 / Random manual sample review: PASS
+3.12 产物确认 / Artifact confirmation: COMPLETE
+
+关键结果 / Key results
+----------------------
+原始记录块 / Raw record blocks: 74,450
+结构正确并解析 / Structurally parsed: 74,415
+异常合并块 / Malformed merged blocks: 35
+精确去重后 / After exact deduplication: 67,739
+最终高置信度古诗 / Final high-confidence ancient poems: 62,715
+人工复核 / Manual review: 1,655
+隔离 / Quarantine: 3,369
+
+最终划分 / Final splits
+-----------------------
+训练集 / Train: 56,443
+验证集 / Validation: 3,135
+测试集 / Test: 3,137
+总计 / Total: 62,715
+
+完整性保证 / Integrity guarantees
+----------------------------------
+- 所有源记录均有去向；被排除的数据保存在审计文件中。
+  Every source record is accounted for; excluded data remains in audit files.
+- 训练、验证和测试 ID 无重叠。
+  Train, validation, and test IDs do not overlap.
+- 相同正文（即使标题不同）不会跨集合出现。
+  Identical bodies, even under different titles, cannot cross split boundaries.
+- 最终记录没有 ASCII 字母/数字编码残片及已知缺字占位符。
+  Final records contain no ASCII alphanumeric encoding fragments or known
+  missing-character placeholders.
+- 所有脚本使用固定规则，可重复生成相同结果。
+  All outputs are deterministically reproducible from fixed rules.
+
+主要产物 / Principal artifacts
+------------------------------
+data/processed/poems_clean.jsonl
+data/processed/train.jsonl
+data/processed/validation.jsonl
+data/processed/test.jsonl
+reports/content_review.jsonl
+reports/content_quarantine.jsonl
+reports/split_integrity_report.txt
+reports/manual_review_sample.txt
+
+结论 / Conclusion
+-----------------
+Tutorial 3 已完成。最终三个数据集可以进入字符级 tokenizer 阶段。
+Tutorial 3 is complete. The three final datasets are ready for the
+character-level tokenizer stage.

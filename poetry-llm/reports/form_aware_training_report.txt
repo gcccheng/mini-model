@@ -1,0 +1,57 @@
+体裁感知训练报告 / Form-aware training report
+================================================
+
+问题 / Problem
+--------------
+通用模型没有体裁标签，因此不能可靠地区分五言、七言、绝句和律诗。
+The general model had no form labels and could not reliably distinguish five- or
+seven-character lines, quatrains, and regulated verse.
+
+严格标注数据 / Strict labeled data
+-----------------------------------
+五言绝句 / Five-character quatrains: 2,402
+七言绝句 / Seven-character quatrains: 7,776
+五言律诗 / Five-character regulated verses: 12,898
+七言律诗 / Seven-character regulated verses: 7,825
+合计 / Total: 30,901
+
+训练 / Training
+---------------
+起点 / Starting checkpoint: step 3,000
+终点 / Final checkpoint: step 5,000
+专项训练 token / Additional form-training tokens: 8,192,000
+专项数据遍数 / Approximate passes over form data: 3.57
+累计训练 token / Total cumulative tokens: 20,480,000
+设备 / Device: Apple M5 MPS
+模型参数 / Parameters: 10,032,128
+
+评估 / Evaluation
+-----------------
+最佳体裁验证 loss / Best form-validation loss: 3.4506
+严格体裁测试 loss / Strict-form test loss: 3.4300
+严格体裁 perplexity / Strict-form test perplexity: 30.8778
+
+结构保证 / Structural guarantees
+---------------------------------
+五言绝句 / Five-character quatrain: 4 lines x 5 characters
+七言绝句 / Seven-character quatrain: 4 lines x 7 characters
+五言律诗 / Five-character regulated verse: 8 lines x 5 characters
+七言律诗 / Seven-character regulated verse: 8 lines x 7 characters
+自动检查样本 / Automatically checked samples: 16
+行数和字数检查 / Line-count and character-count check: PASS
+
+实现方式 / Implementation
+-------------------------
+1. 模型输入增加“体裁：五言绝句”等显式条件。
+   The model input receives an explicit form condition such as “体裁：五言绝句”.
+2. 只使用行数、字数和标点全部严格匹配的记录进行专项训练。
+   Fine-tuning uses only records whose line count, width, and punctuation match strictly.
+3. generate_form.py 在采样时只允许汉字，并强制准确的行数、行宽和“，。”结构。
+   generate_form.py samples only Han characters and enforces exact line count,
+   line width, and comma/full-stop structure.
+
+限制 / Limitations
+------------------
+当前约束保证“形式正确”，但不保证平仄、押韵、对仗、典故或语义质量。
+The current constraints guarantee structural form, but not tonal patterns, rhyme,
+parallelism, allusions, or semantic quality.

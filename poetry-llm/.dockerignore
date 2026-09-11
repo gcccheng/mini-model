@@ -1,0 +1,15 @@
+.venv
+data
+checkpoints
+reports
+scripts
+configs
+poems.txt
+**/__pycache__
+**/*.pyc
+exports/*
+!exports/poetry-10m
+exports/poetry-10m/*
+!exports/poetry-10m/model.pt
+!exports/poetry-10m/tokenizer.json
+!exports/poetry-10m/manifest.json

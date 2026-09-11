@@ -1,0 +1,14 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: poetry-llm
+  namespace: fleet-default
+spec:
+  repo: https://github.com/gcccheng/mini-model.git
+  branch: main
+  paths:
+    - poetry-llm/k8s
+  targets:
+    - clusterSelector:
+        matchLabels:
+          management.cattle.io/cluster-display-name: talos

@@ -1,0 +1,42 @@
+Poetry corpus normalization report
+==================================
+Source: /Users/lillian/git/mini-model/poetry-llm/data/interim/poems_utf8.txt
+Destination: /Users/lillian/git/mini-model/poetry-llm/data/interim/poems_normalized.txt
+Source SHA-256: fbbfb101f993d656fa4a2dd9b0dc092881dc08f31160722d7d95214dc511b263
+Destination SHA-256: 53196a746ebbb8770e33a74ae8e422d73eb68c0f146665c1f083e7ca165bcb30
+
+Corpus invariants
+-----------------
+Characters before: 7,378,798
+Characters after: 7,377,653
+Lines before: 372,454
+Lines after: 372,454
+Blocks before: 74,450
+Blocks after: 74,450
+
+Transformations
+---------------
+CRLF newlines normalized: 0
+Bare CR newlines normalized: 0
+Unicode NFC changed text: False
+Unicode NFC character delta: +0
+BOM characters removed: 0
+NUL characters removed: 0
+Lines trimmed: 594
+Characters removed by trimming: 1,145
+Whitespace-only field lines preserved: 1
+Extra blank lines removed: 0
+
+Punctuation replacements
+------------------------
+'﹐' -> '，': 0
+'︐' -> '，': 0
+'﹒' -> '。': 0
+'．' -> '。': 100
+'﹔' -> '；': 0
+'︔' -> '；': 0
+'﹕' -> '：': 0
+'︓' -> '：': 0
+'﹖' -> '？': 0
+'﹗' -> '！': 0
+Total punctuation replacements: 100

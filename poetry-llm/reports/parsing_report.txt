@@ -1,0 +1,49 @@
+诗词语料解析报告 / Poetry corpus parsing report
+====================================================
+源文件 / Source: /Users/lillian/git/mini-model/poetry-llm/data/interim/poems_normalized.txt
+输出文件 / Output: /Users/lillian/git/mini-model/poetry-llm/data/interim/poems_parsed.jsonl
+拒绝记录 / Rejected: /Users/lillian/git/mini-model/poetry-llm/reports/rejected_records.jsonl
+源文件 SHA-256 / Source SHA-256: 53196a746ebbb8770e33a74ae8e422d73eb68c0f146665c1f083e7ca165bcb30
+
+解析结果 / Parsing results
+------------------------------
+记录块总数 / Total blocks: 74,450
+接受记录 / Accepted records: 74,415
+拒绝记录 / Rejected records: 35
+正文字符数 / Body characters: 6,042,207
+朝代为空 / Empty dynasty: 29
+作者为空 / Empty author: 1
+缺少右方括号的朝代字段 / Dynasty fields without trailing ']': 0
+
+物理行数分布 / Physical-line distribution
+---------------------------------------------
+4 lines: 74,415 blocks
+6 lines: 2 blocks
+7 lines: 31 blocks
+16 lines: 1 blocks
+100 lines: 1 blocks
+
+朝代分布 / Dynasty distribution
+-----------------------------------
+唐朝: 47,473
+宋朝: 22,047
+南北朝: 1,145
+清朝: 939
+明朝: 873
+先秦: 626
+魏晋: 469
+现代: 185
+两汉: 156
+元朝: 155
+五代: 124
+隋朝: 110
+近代: 84
+<EMPTY>: 29
+
+输出 SHA-256 / Output SHA-256: 1522e7f093c63de5253693757fead05333f969bcb92d32863f505f0df8a88a92
+拒绝文件 SHA-256 / Rejected SHA-256: 125625a5e9bae51d18e79047b6780f70b21350d71d34acef3448ad1a2e33e7d3
+
+说明 / Note:
+本步骤仅解析结构，不删除正文中的注释、赏析或非诗歌内容。
+This step parses structure only; it does not remove annotations,
+commentary, or non-poetry content from accepted bodies.

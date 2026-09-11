@@ -1,0 +1,10 @@
+{
+  "checkpoint": "/Users/lillian/git/mini-model/poetry-llm/checkpoints/poetry-10m/best.pt",
+  "checkpoint_step": 500,
+  "device": "mps",
+  "test_batches": 100,
+  "batch_size": 16,
+  "block_size": 256,
+  "test_loss": 5.033543567657471,
+  "perplexity": 153.47590248843522
+}

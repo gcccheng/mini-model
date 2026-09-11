@@ -1,0 +1,46 @@
+数据集划分报告 / Dataset split report
+===========================================
+源文件 / Source: /Users/lillian/git/mini-model/poetry-llm/data/processed/poems_clean.jsonl
+输出目录 / Output directory: /Users/lillian/git/mini-model/poetry-llm/data/processed
+随机种子 / Random seed: 42
+源文件 SHA-256 / Source SHA-256: 091812964e03264a4a8c03c2ab3f275e47e2b0da863fa9074878316710afbf4a
+
+划分规则 / Split policy
+-----------------------------
+训练/验证/测试比例 / Train/validation/test ratios: 90% / 5% / 5%
+相同正文指纹始终进入同一划分，避免跨集合泄漏。
+Identical normalized-body fingerprints always stay in the same split.
+正文指纹组数 / Body-fingerprint groups: 62,199
+多记录正文组 / Multi-record body groups: 507
+
+划分结果 / Split results
+---------------------------
+train:
+  目标记录 / Target records: 56,443
+  实际记录 / Actual records: 56,443
+  实际比例 / Actual ratio: 89.9992%
+  正文字符 / Body characters: 4,051,433
+  正文组 / Body groups: 55,984
+  朝代种类 / Dynasty values: 11
+  SHA-256: e21aa376e7796bf67cbe1029578e3f609f29c8851e5db78a6acb965e7bd6ab2e
+validation:
+  目标记录 / Target records: 3,135
+  实际记录 / Actual records: 3,135
+  实际比例 / Actual ratio: 4.9988%
+  正文字符 / Body characters: 220,151
+  正文组 / Body groups: 3,105
+  朝代种类 / Dynasty values: 11
+  SHA-256: b57d43a2ef72b5ca7e31acfcdbb273943d93807c1ea82509b116e021e9f89505
+test:
+  目标记录 / Target records: 3,137
+  实际记录 / Actual records: 3,137
+  实际比例 / Actual ratio: 5.0020%
+  正文字符 / Body characters: 223,636
+  正文组 / Body groups: 3,110
+  朝代种类 / Dynasty values: 11
+  SHA-256: 05fd643f16dfd4c7e0d7a0fc9cbb013c7037dadd7d65709658f2d150f88fa018
+
+总记录 / Total records: 62,715
+ID 集合互斥 / ID sets disjoint: True
+正文指纹集合互斥 / Body-fingerprint sets disjoint: True
+记录守恒 / Record accounting passed: True

@@ -1,0 +1,8 @@
+Token 数据报告 / Token data report
+=====================================
+词表大小 / Vocabulary size: 8,191
+存储格式 / Storage format: packed uint16
+
+train: records=27,781, tokens=2,292,128, unknown=0, bytes=4,584,256, sha256=f54fa910d209b31f16ab8c97de75990024774748b60dc0081982b3c02f8d7eea
+validation: records=1,572, tokens=129,545, unknown=27, bytes=259,090, sha256=9ae47ec18f0f1a3913f2fee52a162dee651ec9c732c42e70c10bf06f1c13c29a
+test: records=1,548, tokens=127,234, unknown=14, bytes=254,468, sha256=518286ceb557389f493d7e6e3d121903de09ef6fb8ddd913cc0e68870517b170

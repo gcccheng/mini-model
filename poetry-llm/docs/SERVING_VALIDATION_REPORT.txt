@@ -1,0 +1,71 @@
+古诗模型 API 与 Kubernetes 验证报告
+Poetry model API and Kubernetes validation report
+=================================================
+
+目标环境 / Target environment
+-----------------------------
+Cluster: Rancher-managed Talos Kubernetes
+Kubernetes: v1.35.8
+Talos: v1.12.12
+Nodes: talos-cp1, talos-w1, talos-w2
+Architecture: amd64
+Per node: 2 vCPU, approximately 2 GB physical RAM
+IngressClass: none
+StorageClass: none
+LoadBalancer implementation: none observed
+
+实现 / Implementation
+---------------------
+API framework: FastAPI + Uvicorn
+Endpoints: /healthz, /readyz, /v1/model, /v1/generate, /docs
+Authentication: X-API-Key on /v1/model and /v1/generate
+Model: form-aware poetry-10m, step 5,000
+Supported forms: 五言绝句, 七言绝句, 五言律诗, 七言律诗
+Container user: 10001:10001 (non-root)
+Kubernetes exposure: NodePort 30080
+
+验证 / Validation
+-----------------
+Python syntax: PASS
+Kustomize rendering: PASS
+Kubernetes OpenAPI client dry-run: PASS
+NodePort 30080 availability: PASS
+Native macOS MPS API startup: PASS
+Health endpoint: PASS (HTTP 200)
+Readiness endpoint: PASS (model step 5,000)
+Missing API key: PASS (HTTP 401)
+Authenticated generation: PASS (HTTP 200)
+Five-character quatrain structure: PASS (4 x 5)
+Seven-character quatrain structure: PASS (4 x 7)
+Container build: PASS
+Container platform: linux/amd64
+Container image size: 374,641,889 bytes (approximately 375 MB)
+Container runtime memory: approximately 268 MiB
+CPU generation latency observed: approximately 679 ms for one seven-character quatrain
+Container model load and generation: PASS
+
+Kubernetes resources / Kubernetes resource policy
+-------------------------------------------------
+Replicas: 1
+CPU request/limit: 250m / 1500m
+Memory request/limit: 512Mi / 1200Mi
+Read-only root filesystem: enabled
+Privilege escalation: disabled
+Linux capabilities: all dropped
+Startup, readiness, and liveness probes: configured
+
+当前状态 / Current status
+-------------------------
+本地 API 和 amd64 容器已经完成。Kubernetes manifests 已验证，但尚未应用到
+集群。唯一剩余依赖是一个 Talos 节点可访问的镜像 registry 和最终镜像名称。
+
+The native API and amd64 container are complete. Kubernetes manifests are validated
+but have not been applied. The only remaining dependency is a registry reachable by
+the Talos nodes and a final image name.
+
+本机 Docker 当前没有配置 Docker Hub 或 GHCR 登录，且 talosctl 未安装。因此
+没有使用临时匿名 registry，也没有把 placeholder 镜像部署到集群。
+
+Docker currently has no configured Docker Hub or GHCR login, and talosctl is not
+installed. No temporary anonymous registry was used, and no placeholder image was
+deployed to the cluster.

@@ -1,0 +1,47 @@
+继续训练报告 / Continued training report
+===========================================
+
+原因 / Reason
+-------------
+500-step 模型只观察了约 36% 的一遍训练语料，生成结果缺乏稳定诗句结构。
+The 500-step model had seen only about 36% of one training-corpus pass and did
+not produce stable poetic structure.
+
+训练设置 / Training setup
+-------------------------
+起点 / Starting checkpoint: step 500
+终点 / Final step: 3,000
+模型参数 / Model parameters: 10,032,128
+设备 / Device: Apple M5 MPS
+累计训练 token / Cumulative training tokens: 12,288,000
+累计语料 epoch / Approximate cumulative corpus epochs: 2.16
+累计耗时 / Cumulative elapsed time: 609.37 seconds
+续训学习率 / Continuation learning rate: cosine decay from about 1.13e-4 to 2e-5
+
+指标对比 / Metric comparison
+----------------------------
+                         step 500       step 3,000
+Best validation loss       5.0370          4.4259
+Test loss                  5.0335          4.4538
+Test perplexity          153.4759         85.9512
+
+测试 perplexity 降低约 44.0%。
+Test perplexity decreased by approximately 44.0%.
+
+同参数生成样本 / Same-settings generation sample
+------------------------------------------------
+朝代：唐朝
+作者：李白
+题目：月夜
+正文：天涯一夜，夜晚秋霜。白云中夜，霜夜月秋。秋凉又，梦落花寒。
+
+结论 / Conclusion
+-----------------
+新模型已明显学到诗句边界、常见节奏及更稳定的短句模式，但 10M 参数模型、
+混合体裁语料和约 2.16 epoch 仍不足以持续生成高质量格律诗。输出应视为模型
+生成的诗歌草稿，不应冒充李白原作。
+
+The continued model has learned clearer line boundaries, common rhythms, and
+more stable short phrases. However, a 10M-parameter model trained on mixed genres
+for about 2.16 epochs still cannot consistently write high-quality regulated verse.
+Outputs are generated drafts and must not be presented as authentic Li Bai works.

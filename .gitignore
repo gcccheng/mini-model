@@ -1,0 +1,26 @@
+.DS_Store
+**/__pycache__/
+**/*.py[cod]
+
+# Local environments and secrets: never commit.
+poetry-llm/.venv/
+poetry-llm/.secrets/
+poetry-llm/.env
+poetry-llm/*.pem
+poetry-llm/*.key
+poetry-llm/kubeconfig*
+poetry-llm/k8s/secret.example.yaml
+
+# Training inputs, derived datasets, and large resumable checkpoints stay local.
+poetry-llm/data/
+poetry-llm/checkpoints/
+poetry-llm/poems.txt
+poetry-llm/reports/*.jsonl
+
+# Keep only the final step-5000 inference export in Git.
+poetry-llm/exports/poetry-10m-step3000/
+poetry-llm/exports/poetry-10m-form/
+
+# Local test artifacts.
+*.log
+.pytest_cache/

@@ -1,0 +1,30 @@
+诗词精确去重报告 / Exact poetry deduplication report
+==========================================================
+源文件 / Source: /Users/lillian/git/mini-model/poetry-llm/data/interim/poems_parsed.jsonl
+唯一记录 / Unique output: /Users/lillian/git/mini-model/poetry-llm/data/processed/poems_unique.jsonl
+重复审计 / Duplicate audit: /Users/lillian/git/mini-model/poetry-llm/reports/duplicates.jsonl
+源文件 SHA-256 / Source SHA-256: 1522e7f093c63de5253693757fead05333f969bcb92d32863f505f0df8a88a92
+
+去重结果 / Deduplication results
+--------------------------------------
+输入记录 / Input records: 74,415
+保留记录 / Retained records: 67,739
+移除重复 / Removed duplicates: 6,676
+重复组数 / Duplicate groups: 6,576
+最大重复组 / Largest duplicate group: 4
+正文相同但标题不同的组 / Same-body, different-title groups: 529
+
+元数据冲突 / Metadata conflicts among removed duplicates
+------------------------------------------------------------
+朝代冲突 / Dynasty conflicts: 7
+作者冲突 / Author conflicts: 106
+
+唯一文件 SHA-256 / Unique SHA-256: 47b856db30d3c015fa47e6b20cc5ec29ac023b26a8207c8399196c693e561af0
+重复文件 SHA-256 / Duplicate SHA-256: a9476b7a2d1ce2639b0de86165c811c62ff3bc9f47d746bf476f4a0431ffc844
+
+规则 / Rule:
+删除所有空白后，标题与正文都相同才视为精确重复。保留首次出现的记录。
+A record is an exact duplicate only when both title and body match after
+whitespace removal. The first occurrence is retained.
+正文相同但标题不同的记录不会自动删除。
+Records with the same body but different titles are not removed automatically.

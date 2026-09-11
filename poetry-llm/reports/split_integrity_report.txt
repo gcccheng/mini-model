@@ -1,0 +1,24 @@
+数据集完整性报告 / Dataset integrity report
+=================================================
+源记录 / Source records: 62,715
+训练记录 / Train records: 56,443
+验证记录 / Validation records: 3,135
+测试记录 / Test records: 3,137
+合计 / Combined records: 62,715
+
+跨集合重叠 / Cross-split overlap
+--------------------------------------
+train/validation: IDs=0, body fingerprints=0, source blocks=0
+train/test: IDs=0, body fingerprints=0, source blocks=0
+validation/test: IDs=0, body fingerprints=0, source blocks=0
+
+记录守恒 / Record accounting
+----------------------------------
+缺失 ID / Missing IDs: 0
+额外 ID / Extra IDs: 0
+内容被改写 / Changed records: 0
+训练集内部重复 ID / Duplicate train IDs: 0
+验证集内部重复 ID / Duplicate validation IDs: 0
+测试集内部重复 ID / Duplicate test IDs: 0
+
+最终结果 / Final result: PASS

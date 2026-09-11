@@ -1,0 +1,7 @@
+{
+  "format": "poetry-llm-inference-v1",
+  "model_sha256": "9d3aa83f0b657d790dbf666def3ad0ccbca9ef870fa350fd9d061f78dae09df4",
+  "tokenizer_sha256": "7a114b566feff50bfb89c5ffc167928788fe9f31ca76e8e4a0911ac23c4770d6",
+  "parameters": 10032128,
+  "training_step": 5000
+}

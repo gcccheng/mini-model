@@ -1,0 +1,8 @@
+{
+  "block_size": 256,
+  "n_layer": 10,
+  "n_head": 4,
+  "n_embd": 256,
+  "dropout": 0.1,
+  "bias": false
+}

@@ -1,0 +1,46 @@
+诗词 JSONL 验证报告 / Poetry JSONL validation report
+=======================================================
+源文件 / Source: /Users/lillian/git/mini-model/poetry-llm/data/interim/poems_parsed.jsonl
+可疑记录 / Suspicious output: /Users/lillian/git/mini-model/poetry-llm/reports/suspicious_records.jsonl
+源文件 SHA-256 / Source SHA-256: 1522e7f093c63de5253693757fead05333f969bcb92d32863f505f0df8a88a92
+
+结构验证 / Structural validation
+------------------------------------
+合法结构记录 / Structurally valid records: 74,415
+JSON 错误 / JSON errors: 0
+模式错误 / Schema errors: 0
+重复 ID / Duplicate IDs: 0
+重复来源编号 / Duplicate source blocks: 0
+
+内容筛查 / Content screening
+-------------------------------
+可疑记录总数 / Unique suspicious records: 680
+正文最短长度 / Minimum body length: 2
+正文最长长度 / Maximum body length: 17,362
+
+原因统计 / Reason counts
+--------------------------
+body_longer_than_500: 565
+body_longer_than_1000: 165
+contains_marker:出自: 50
+body_shorter_than_8: 31
+empty_dynasty: 29
+contains_marker:注释: 16
+possible_html: 14
+body_longer_than_5000: 12
+contains_marker:译文: 8
+contains_marker:赏析: 6
+contains_marker:相关成语: 6
+empty_author: 1
+contains_marker:词句解析: 1
+contains_marker:英文翻译: 1
+contains_marker:相关楹联: 1
+contains_marker:更多关于: 1
+contains_marker:白话译文: 1
+
+可疑文件 SHA-256 / Suspicious SHA-256: cac616d7a7b6b7f9ec5c8c6a226e1decbf301eec3f06166ef9d9d3ece46ed121
+
+结论 / Conclusion:
+结构错误属于阻断性问题；内容标记只是候选问题，不会自动删除记录。
+Structural errors are blocking issues. Content flags are review candidates
+and do not automatically remove records.

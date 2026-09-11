@@ -1,0 +1,14 @@
+字符级 Tokenizer 报告 / Character tokenizer report
+=================================================
+训练文件 / Training source: /Users/lillian/git/mini-model/poetry-llm/data/processed/train.jsonl
+训练记录 / Training records: 56,443
+训练字符 / Training characters: 5,563,217
+普通字符 / Regular characters: 8,187
+特殊 token / Special tokens: 4
+词表大小 / Vocabulary size: 8,191
+仅出现一次的字符 / Characters occurring once: 1,183
+未知字符策略 / Unknown-character policy: <unk>
+Tokenizer SHA-256: 7a114b566feff50bfb89c5ffc167928788fe9f31ca76e8e4a0911ac23c4770d6
+
+词表只使用训练集构建，验证集和测试集不会影响词表。
+The vocabulary is built from the training split only; validation and test do not influence it.

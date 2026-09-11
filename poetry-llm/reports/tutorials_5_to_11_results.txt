@@ -1,0 +1,79 @@
+教程 5–11 执行结果 / Tutorials 5–11 execution results
+=========================================================
+
+前置教程 4 / Tutorial 4 prerequisite
+-------------------------------------
+状态 / Status: PASS
+训练集字符 / Training characters: 5,563,217
+普通字符 / Regular characters: 8,187
+特殊 token / Special tokens: 4
+词表大小 / Vocabulary size: 8,191
+
+教程 5：Token 数据 / Tutorial 5: Token data
+------------------------------------------------
+状态 / Status: PASS
+train: 5,676,103 tokens, 0 unknown
+validation: 310,658 tokens, 79 unknown
+test: 314,486 tokens, 88 unknown
+格式 / Format: packed uint16 memory-mapped files
+
+教程 6：模型架构 / Tutorial 6: Model architecture
+-----------------------------------------------------
+状态 / Status: PASS
+模型 / Model: decoder-only causal Transformer
+上下文 / Context: 256 tokens
+层数 / Layers: 10
+注意力头 / Attention heads: 4
+隐藏维度 / Embedding width: 256
+参数 / Parameters: 10,032,128 (10.032M)
+前向和反向测试 / Forward and backward smoke test: PASS
+
+教程 7：M5 配置 / Tutorial 7: M5 configuration
+---------------------------------------------------
+状态 / Status: PASS
+设备 / Device: Apple MPS
+两步端到端冒烟训练 / Two-step end-to-end smoke training: PASS
+Checkpoint 保存 / Checkpoint save: PASS
+
+教程 8：预训练 / Tutorial 8: Pretraining
+-------------------------------------------
+状态 / Status: PASS
+训练 step / Training steps: 500
+观察 token / Tokens seen: 2,048,000
+耗时 / Elapsed time: 104.56 seconds
+平均速度 / Average speed near completion: about 19,905 tokens/second
+初始训练 loss / Initial training loss: 9.0752
+最后训练 loss / Final training loss: 5.0996
+最佳验证 loss / Best validation loss: 5.0370
+
+教程 9：测试评估 / Tutorial 9: Test evaluation
+------------------------------------------------
+状态 / Status: PASS
+测试批次数 / Test batches: 100
+测试 loss / Test loss: 5.0335
+Perplexity: 153.4759
+
+教程 10：文本生成 / Tutorial 10: Text generation
+--------------------------------------------------
+状态 / Status: PASS
+样本数 / Samples: 3
+说明 / Note: 输出已经学习基本字段格式和古诗常见字符，但短训练导致
+重复、短句及语义不稳定。The model learned the record structure and common
+poetic characters, but brief training leaves repetition, fragments, and weak semantics.
+
+教程 11：模型导出 / Tutorial 11: Model export
+------------------------------------------------
+状态 / Status: PASS
+格式 / Format: poetry-llm-inference-v1
+参数 / Parameters: 10,032,128
+训练 step / Training step: 500
+模型 SHA-256 / Model SHA-256:
+33fe1a31f728ca6f53759333d5e36fffa44e12bd58f85f473417af2096fc3a62
+Tokenizer SHA-256:
+7a114b566feff50bfb89c5ffc167928788fe9f31ca76e8e4a0911ac23c4770d6
+
+最终结论 / Final conclusion
+----------------------------
+教程 5–11 已全部实现、运行并验证。这个 checkpoint 是教学基线，不是充分
+收敛的成品模型。Tutorials 5–11 are fully implemented, executed, and verified.
+This checkpoint is an educational baseline, not a fully converged production model.

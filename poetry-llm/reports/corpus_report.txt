@@ -1,0 +1,167 @@
+Poetry corpus inspection report
+================================
+Source: /Users/lillian/git/mini-model/poetry-llm/data/interim/poems_utf8.txt
+SHA-256: fbbfb101f993d656fa4a2dd9b0dc092881dc08f31160722d7d95214dc511b263
+Encoding: UTF-8 (strict decoding succeeded)
+Bytes: 21,215,340
+Characters: 7,378,798
+Lines: 372,454
+Non-empty lines: 298,004
+Blank lines: 74,450
+Unique characters: 9,516
+Unicode replacement characters: 0
+Unexpected control characters: 0
+
+Record structure
+----------------
+Blank-line-separated blocks: 74,450
+Blocks with 3 non-empty fields: 1
+Blocks with 4 non-empty fields: 74,414
+Blocks with 6 non-empty fields: 2
+Blocks with 7 non-empty fields: 31
+Blocks with 16 non-empty fields: 1
+Blocks with 100 non-empty fields: 1
+Structurally valid four-field blocks: 74,414
+Malformed blocks: 36
+
+Body-length statistics (valid four-field blocks)
+------------------------------------------------
+Minimum: 2
+Mean: 81.20
+Median: 60
+90th percentile: 128
+95th percentile: 168
+99th percentile: 432
+Maximum: 17,362
+Shorter than 8 characters: 31
+Longer than 500 characters: 565
+Longer than 1,000 characters: 165
+Longer than 5,000 characters: 12
+
+Dynasty-field values
+--------------------
+唐朝]: 47,473
+宋朝]: 22,047
+南北朝]: 1,145
+清朝]: 938
+明朝]: 873
+先秦]: 626
+魏晋]: 469
+现代]: 185
+两汉]: 156
+元朝]: 155
+五代]: 124
+隋朝]: 110
+近代]: 84
+]: 29
+
+Potential contamination markers
+-------------------------------
+相关成语: 6
+注释: 34
+赏析: 8
+译文: 26
+英文翻译: 1
+词句解析: 1
+出自: 61
+更多关于: 1
+相关楹联: 1
+
+Twenty longest valid bodies
+---------------------------
+block=74,320 length=17,362 title=金刚经全文讲解及译文-百岁高僧开示
+block=42,886 length=15,826 title=诗三百三首
+block=74,177 length=14,392 title=浮生六记,浪游记快
+block=74,123 length=12,526 title=游嵩山日记河南河南府登封县
+block=47,771 length=12,327 title=三都赋
+block=74,174 length=8,916 title=浮生六记,闺房记乐
+block=74,176 length=8,444 title=浮生六记,坎坷记愁
+block=70,411 length=6,934 title=治安策
+block=47,893 length=5,838 title=咏怀八十二首
+block=74,140 length=5,277 title=游太华山记_徐霞客游记
+block=47,769 length=5,259 title=西征赋
+block=42,522 length=5,025 title=宫词（梨园子弟以下四十一首一作王珪诗）
+block=74,141 length=4,946 title=溯江纪源_徐霞客游记
+block=74,175 length=4,828 title=浮生六记,闲情记趣
+block=74,137 length=4,735 title=游雁宕山日记后_徐霞客游记
+block=7,736 length=4,500 title=古风
+block=74,135 length=4,217 title=闽游日记后_徐霞客游记
+block=45,571 length=4,032 title=七言
+block=74,148 length=3,980 title=大堰河—我的保姆
+block=62,306 length=3,844 title=乐语
+
+Malformed-block examples
+------------------------
+block=12,407 fields=7 first_line=送客还江东
+block=12,821 fields=7 first_line=浪淘沙二首（一作皇甫松诗）
+block=12,948 fields=7 first_line=浪淘沙二首（一作皇甫松诗）
+block=12,990 fields=6 first_line=东峰亭各赋一物得寒溪草
+block=13,395 fields=7 first_line=瑶草春
+block=15,888 fields=7 first_line=故梁国公主池亭
+block=15,971 fields=7 first_line=故梁国公主池亭
+block=20,342 fields=7 first_line=追赋画江潭苑四首
+block=20,651 fields=7 first_line=代曲江老人百韵（年十六时作）
+block=20,675 fields=7 first_line=江边四十韵（此后并江陵时作）
+block=25,118 fields=7 first_line=秋思
+block=25,925 fields=7 first_line=题梁国公主池亭
+block=30,328 fields=7 first_line=题缑山王子晋庙
+block=30,984 fields=7 first_line=池塘晚景
+block=31,067 fields=7 first_line=池塘晚景
+block=32,754 fields=7 first_line=中秋月
+block=32,987 fields=7 first_line=题甘露寺
+block=33,493 fields=7 first_line=渔具诗。罱
+block=33,549 fields=7 first_line=五歌。水鸟
+block=33,607 fields=7 first_line=江南秋怀寄华阳山人
+
+Fifty most common characters
+-----------------------------
+'。': 476,397 (IDEOGRAPHIC FULL STOP)
+'，': 441,992 (FULLWIDTH COMMA)
+'\\n': 372,454 (UNKNOWN)
+'朝': 83,120 (CJK UNIFIED IDEOGRAPH-671D)
+']': 74,701 (RIGHT SQUARE BRACKET)
+'不': 51,279 (CJK UNIFIED IDEOGRAPH-4E0D)
+'唐': 49,488 (CJK UNIFIED IDEOGRAPH-5510)
+'人': 48,101 (CJK UNIFIED IDEOGRAPH-4EBA)
+'一': 37,093 (CJK UNIFIED IDEOGRAPH-4E00)
+'风': 34,142 (CJK UNIFIED IDEOGRAPH-98CE)
+'山': 33,489 (CJK UNIFIED IDEOGRAPH-5C71)
+'无': 30,908 (CJK UNIFIED IDEOGRAPH-65E0)
+'花': 29,462 (CJK UNIFIED IDEOGRAPH-82B1)
+'日': 29,202 (CJK UNIFIED IDEOGRAPH-65E5)
+'春': 28,364 (CJK UNIFIED IDEOGRAPH-6625)
+'有': 27,969 (CJK UNIFIED IDEOGRAPH-6709)
+'天': 26,944 (CJK UNIFIED IDEOGRAPH-5929)
+'中': 25,758 (CJK UNIFIED IDEOGRAPH-4E2D)
+'云': 25,740 (CJK UNIFIED IDEOGRAPH-4E91)
+'、': 24,220 (IDEOGRAPHIC COMMA)
+'来': 23,966 (CJK UNIFIED IDEOGRAPH-6765)
+'月': 23,922 (CJK UNIFIED IDEOGRAPH-6708)
+'上': 23,800 (CJK UNIFIED IDEOGRAPH-4E0A)
+'宋': 23,258 (CJK UNIFIED IDEOGRAPH-5B8B)
+'何': 22,881 (CJK UNIFIED IDEOGRAPH-4F55)
+'时': 22,281 (CJK UNIFIED IDEOGRAPH-65F6)
+'之': 21,926 (CJK UNIFIED IDEOGRAPH-4E4B)
+'水': 21,608 (CJK UNIFIED IDEOGRAPH-6C34)
+'年': 20,332 (CJK UNIFIED IDEOGRAPH-5E74)
+'相': 19,881 (CJK UNIFIED IDEOGRAPH-76F8)
+'为': 19,751 (CJK UNIFIED IDEOGRAPH-4E3A)
+'长': 19,247 (CJK UNIFIED IDEOGRAPH-957F)
+'江': 18,708 (CJK UNIFIED IDEOGRAPH-6C5F)
+'如': 18,692 (CJK UNIFIED IDEOGRAPH-5982)
+'生': 18,520 (CJK UNIFIED IDEOGRAPH-751F)
+'归': 18,330 (CJK UNIFIED IDEOGRAPH-5F52)
+'白': 17,687 (CJK UNIFIED IDEOGRAPH-767D)
+'清': 17,241 (CJK UNIFIED IDEOGRAPH-6E05)
+'自': 17,150 (CJK UNIFIED IDEOGRAPH-81EA)
+'子': 17,126 (CJK UNIFIED IDEOGRAPH-5B50)
+'秋': 17,052 (CJK UNIFIED IDEOGRAPH-79CB)
+'君': 16,512 (CJK UNIFIED IDEOGRAPH-541B)
+'（': 16,484 (FULLWIDTH LEFT PARENTHESIS)
+'）': 16,479 (FULLWIDTH RIGHT PARENTHESIS)
+'心': 16,236 (CJK UNIFIED IDEOGRAPH-5FC3)
+'是': 16,225 (CJK UNIFIED IDEOGRAPH-662F)
+'行': 16,087 (CJK UNIFIED IDEOGRAPH-884C)
+'去': 15,754 (CJK UNIFIED IDEOGRAPH-53BB)
+'见': 15,747 (CJK UNIFIED IDEOGRAPH-89C1)
+'南': 15,687 (CJK UNIFIED IDEOGRAPH-5357)

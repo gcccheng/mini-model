@@ -1,0 +1,63 @@
+古诗内容清理报告 / Ancient-poetry content-cleaning report
+==============================================================
+源文件 / Source: /Users/lillian/git/mini-model/poetry-llm/data/processed/poems_unique.jsonl
+干净数据 / Clean output: /Users/lillian/git/mini-model/poetry-llm/data/processed/poems_clean.jsonl
+隔离数据 / Quarantine: /Users/lillian/git/mini-model/poetry-llm/reports/content_quarantine.jsonl
+人工复核 / Manual review: /Users/lillian/git/mini-model/poetry-llm/reports/content_review.jsonl
+源文件 SHA-256 / Source SHA-256: 47b856db30d3c015fa47e6b20cc5ec29ac023b26a8207c8399196c693e561af0
+
+分类结果 / Classification results
+----------------------------------------
+输入记录 / Input records: 67,739
+干净记录 / Clean records: 62,715
+人工复核 / Review records: 1,655
+隔离记录 / Quarantined records: 3,369
+记录守恒 / Accounted records: 67,739
+
+原因统计 / Reason counts
+----------------------------
+contains_missing_character_placeholder: 1,865
+contains_ascii_punctuation: 1,439
+contains_ascii_alphanumeric: 883
+contains_corruption_symbol: 294
+non_ancient_dynasty: 268
+underscore_joined_title_metadata: 188
+contains_parenthetical_citation: 178
+prose_genre_title_with_prose_signals: 152
+body_longer_than_1000: 147
+contains_ascii_alphanumeric_metadata: 80
+body_shorter_than_8: 31
+unknown_dynasty: 29
+prose_like_clause_lengths: 21
+title_marker:游记: 21
+contains_marker:注释: 16
+title_marker:日记: 16
+possible_html_or_character_placeholder: 14
+body_longer_than_5000: 12
+contains_source_explanation: 10
+contains_marker:译文: 8
+contains_marker:赏析: 6
+contains_marker:相关成语: 6
+title_marker:全文讲解: 1
+contains_marker:词句解析: 1
+contains_marker:英文翻译: 1
+contains_marker:相关楹联: 1
+contains_marker:更多关于: 1
+contains_marker:词句注释: 1
+contains_marker:白话译文: 1
+
+干净文件 SHA-256 / Clean SHA-256: 091812964e03264a4a8c03c2ab3f275e47e2b0da863fa9074878316710afbf4a
+隔离文件 SHA-256 / Quarantine SHA-256: dbeb396b1cd9d3658a8bd26e86d1ee9a74a8a03fca1cf9fa029a6d47bb2dc0e7
+复核文件 SHA-256 / Review SHA-256: 149a29cfb703402213068fe7d038064004b6253ca507aba0b3ca33125a7e94db
+
+策略 / Policy:
+仅明确标注为先秦至清朝、正文不少于 8 字且没有强污染信号的记录
+可直接进入干净集。1000–5000 字长篇及含解释性标记的记录进入人工复核。
+近代、现代、朝代未知、超过 5000 字、含网址或大量拉丁字符的记录被隔离。
+Only records explicitly dated from Pre-Qin through Qing, with at least eight
+body characters and no strong contamination signal, can enter the clean set.
+Works of 1,000–5,000 characters and records with explanatory markers require
+manual review. Modern, unknown-dynasty, >5,000-character, URL-containing,
+or Latin-heavy records are quarantined.
+原记录不会被改写；所有排除记录均保留在审计文件中。
+Source records are never rewritten; every excluded record remains auditable.
