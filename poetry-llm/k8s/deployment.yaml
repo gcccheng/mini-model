@@ -32,7 +32,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: poetry-api
-          image: ghcr.io/gcccheng/poetry-llm:main
+          image: ghcr.io/gcccheng/poetry-llm@sha256:d3584741c59533f52f089b3d3203a91c962e781c460cc2e7c371cbf87915b0df
           imagePullPolicy: Always
           ports:
             - name: http
